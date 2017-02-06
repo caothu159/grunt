@@ -5,14 +5,13 @@ import (
 )
 
 // add appends a new child node to n with the specified name.
-func (n *node) addLess() *node {
+func (n *node) addOption() *node {
 	child := &node{
 		identity: golibs.UUID(),
-		name:     "less",
+		name:     "options",
 		changed:  n.changed,
 	}
-	child.addOption()
-	n.children = append(n.children, child)
 	n.changed()
+	n.children = append(n.children, child)
 	return child
 }

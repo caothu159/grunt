@@ -22,8 +22,7 @@ func (a *Grunt) Size(t gxui.Theme) math.Size {
 }
 
 func (root *node) Init() *node {
-	less := root.add("less")
-	less.add("options")
+	root.addLess()
 
 	autoprefixer := root.add("autoprefixer")
 	autoprefixer.add("options")
